@@ -1,0 +1,88 @@
+body{
+background-color: #dbf3f2;
+}
+
+   nav{
+    margin-bottom:2em;
+    background: #ff9459 !important;
+    color: white !important;
+    height:85px;
+   }
+.logo{
+position: relative;
+top:-1em;
+}
+#logo{
+width:200px;
+height:100px;
+position: relative;
+top:-1em;
+}
+ .home p{
+ font-size:1.2em;
+
+ }
+    .search{
+    width:25%;
+    margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
+    display: flex;
+    text-align:center;
+    justify-content:left;
+    align-content: center;
+    flex-direction: column;
+    }
+    #searchButton{
+    border-radius:10%;
+    }
+    #searchInput{
+    margin-right:10px;
+    }
+    #title{
+    color: rgb(63, 63, 63);
+    text-align: center;
+    }
+    .list{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); /*sirve para que se adapte las columnas al responsive //ver grid css*/
+        grid-auto-rows:auto;/*sirve para que se adapte las columnas al responsive //ver grid css*/
+        grid-gap:2em;
+        margin-top:1.5em;
+        text-transform: capitalize;
+        }
+    .template{
+    box-shadow: 10px 10px 5px 0px rgba(73, 73, 73, 0.521);
+    width:260px;
+    height:450px;
+    margin-bottom:20%;
+    background-color: rgba(245, 245, 245, 0.945);
+    border-radius:8px;
+    z-index:-9999;
+    animation-name: opacity;
+    animation-duration:1s;
+    }
+    .template label{
+        display: flex; /*este codigo alinea en columnas los label osea uno de bajo de otro,solo se aplica a los label*/
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: rgb(63, 63, 63);
+        text-align: center;
+        font-weight: bold;
+        margin-bottom:1em;
+    }
+    
+    #img{
+    width:100%;
+    height:300px;
+    }
+  
+    .footer{
+        background-color:#edeef7de;
+        position: fixed;
+        bottom:0;
+        font-size:1.3em;
+        display: block;
+        width:100vw;
+        text-align: center;
+        
+        }
