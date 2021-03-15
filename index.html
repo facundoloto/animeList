@@ -11,6 +11,7 @@
     <title>AnimeList</title>
   </head>
   <body>
+ 
     <nav class="navbar  justify-content-between">
         <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
         <img src="img/ShonenjumpwebsitelogoFINAL.png" id="logo">
@@ -18,15 +19,23 @@
             <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
         </form>
       </nav>
-  
+<div class="navbarBuscador">
+  <nav class="navbar navbar-dark justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
 
+</div>
      
-
-<div class="home text-light">
+<div class="home ">
+   
+ 
+   <div class="buscador">
     <h1 class="text-center">Otaku Cueva</h1>
     <p class="text-center">!Encuentra tu anime favorito!</p>
- 
-   <div class="search">
     <div class="input-group">
         <input type="text" id="searchInput"class="form-control rounded" placeholder="Search" aria-label="Search"
           aria-describedby="search-addon" />
@@ -36,25 +45,27 @@
 </div>
 
 
+
   
 <div class="container">
     <template id="template">
         <div class="card" >
         <img src="" id="img">
-        <div class="informacion">
-          <h4 id="title"></h4>
-          <label>ranking</label>
-          <label id="ranking"></label>
-          <label>calificacion</label>
-          <label id="calificacion"></label>
-          <label>Fecha</label>
-          <label id="date"></label>
-        </div>
-        
+        <h5 id="title"></h5>
         <div class="synopsis">
-          <label>synopsis</label>
+          <h6 class="text-center text-info">sinopsis</h6>
           <p id="synopsis"></p>
         </div>
+        <div class="informacion">
+          
+          <label>puntuacion</label>
+          <label id="ranking" class="text-info"></label>
+          <label>clasificacion</label>
+          <label id="calificacion" class="text-info"></label>
+          <label>Fecha</label>
+          <label id="date" class="text-info"></label>
+        </div>
+        
         
         </div>
        
@@ -72,7 +83,7 @@
 
 </div>
 </div>  
-
+<img src="img/button-scroll.png" id="scroll">
 <div class="footer">
     <footer class="" >Creado por facundo loto.</footer>
 </div>

@@ -20,17 +20,21 @@
         swal("hasta que no seas mayor no puedes entrar.", window.close());
        
     }
-  });
-  */
+  })*/
+  
 let animeButton=document.getElementById("searchButton")
 let input=document.getElementById("searchInput")
 let anime=document.getElementById("listAnime")
-
+let flecha=document.getElementById("scroll")
+flecha.addEventListener("click",function (){
+  window.scrollTo(0, 0)}
+  )
 function remove(){
     while (anime.firstChild) { //si hay un hijo pasa al ciclo y elimana a todos hasta que el primero hijo de falso(ya no tenga ningun nodo hijo)
         anime.removeChild(anime.firstChild); 
-        window.scrollTo(0, 0)//vuelve arriba de todo dentro del dom
+        
     }
+   
 }
 
 async function buscar(query){
@@ -42,13 +46,14 @@ console.log(resultado.results)
 let total=resultado.results.length
 console.log(total)
 for (let i=0;i<total;i++){
-
+    
     let fragment = document.createDocumentFragment();
     const template=document.getElementById("template") //guardamos el temaplate en una variable
     const newTemplate=template.content.cloneNode(true) //clonamos el template
     let title=resultado.results[`${i}`].title
     if(title.includes(buscador)){ //incluide es case sensitive por eso transformamos lo que se guarda en buscador para mostrar solo lo relacionado a la palabra que estamos buscando
       console.log(buscador)
+      flecha.style.display="block" 
       bandera=true//si la bandera se activa significa que se mostro algo por que se encontro lo que buscaba
       newTemplate.getElementById('title').textContent=`${resultado.results[`${i}`].title}`
       newTemplate.getElementById('img').src=`${resultado.results[`${i}`].image_url}`
