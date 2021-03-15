@@ -1,9 +1,9 @@
 body{
-background-color: #dbf3f2;
+    background-color: #05b0b9;
 }
 
    nav{
-    margin-bottom:2em;
+    
     background: #ff9459 !important;
     color: white !important;
     height:85px;
@@ -18,11 +18,16 @@ height:100px;
 position: relative;
 top:-1em;
 }
+
+.home{
+margin-top:1em;
+}
  .home p{
  font-size:1.2em;
 
  }
     .search{
+
     width:25%;
     margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
     display: flex;
@@ -46,20 +51,25 @@ top:-1em;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); /*sirve para que se adapte las columnas al responsive //ver grid css*/
         grid-auto-rows:auto;/*sirve para que se adapte las columnas al responsive //ver grid css*/
-        grid-gap:2em;
+        grid-gap:5em;
         margin-top:1.5em;
         text-transform: capitalize;
         }
-    .template{
+    .card{
     box-shadow: 10px 10px 5px 0px rgba(73, 73, 73, 0.521);
-    width:260px;
-    height:450px;
+    width:300px;
     margin-bottom:20%;
     background-color: rgba(245, 245, 245, 0.945);
     border-radius:8px;
     z-index:-9999;
     animation-name: opacity;
     animation-duration:1s;
+    }
+   
+
+    .card h4{
+    margin-top:.5em;
+    height:2.2em;
     }
     .template label{
         display: flex; /*este codigo alinea en columnas los label osea uno de bajo de otro,solo se aplica a los label*/
