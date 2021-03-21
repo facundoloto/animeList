@@ -8,38 +8,44 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/handlebars-v4.7.7.js"></script>
     <title>AnimeList</title>
   </head>
   <body>
- 
-    <nav class="navbar  justify-content-between">
-        <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
-        <img src="img/ShonenjumpwebsitelogoFINAL.png" id="logo">
-        <form class="form-inline">
-            <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
-        </form>
-      </nav>
-<div class="navbarBuscador">
-  <nav class="navbar navbar-dark justify-content-between">
-    <a class="navbar-brand">Navbar</a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </nav>
+    <div class="navbarBuscador fixed-top">
+
+  
+
+
+    
+ <nav class="navbar navbar-dark bg-dark justify-content-between">
+  <a class="navbar-brand">OtakuCueva</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2"  type="search"  id="searchInput" placeholder="escriba el nombre" aria-label="Search">
+
+    <button class="btn btn-outline-success  my-2 my-sm-0"  id="searchButton" type="button">Search</button>
+  </form>
+</nav>
 
 </div>
-     
-<div class="home ">
-   
- 
+
+<!--<div class="header">
+  <nav class="navbar  justify-content-between">
+    <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
+    <img src="img/ShonenjumpwebsitelogoFINAL.png" id="logo">
+    <form class="form-inline">
+        <a class="navbar-brand"><img src="/img/pngwing.com.png" class="logo"></a>
+    </form>
+  </nav>
+ </div> 
+-->
+ <div class="home ">
    <div class="buscador">
-    <h1 class="text-center">Otaku Cueva</h1>
-    <p class="text-center">!Encuentra tu anime favorito!</p>
+    <h1 class="text-center">Otaku cueva</h1>
+    <p class="text-center">!Encuentra tu anime/manga favorito!</p>
     <div class="input-group">
-        <input type="text" id="searchInput"class="form-control rounded" placeholder="Search" aria-label="Search"
-          aria-describedby="search-addon" />
-        <button type="button" id="searchButton" class="btn-primary">search</button>
+      <button type="button" class="btn btn-warning " id="anime">anime</button>
+      <button type="button" class="btn btn-outline-success " id="manga">manga</button>
       </div>
     </div>
 </div>
@@ -48,16 +54,13 @@
 
   
 <div class="container">
+  <h1 class="text-info text-center" id="nombre">Top 10</h1>
     <template id="template">
         <div class="card" >
+        <h5 class="text-center text-info"id="title"></h5>
         <img src="" id="img">
-        <h5 id="title"></h5>
-        <div class="synopsis">
-          <h6 class="text-center text-info">sinopsis</h6>
-          <p id="synopsis"></p>
-        </div>
+        
         <div class="informacion">
-          
           <label>puntuacion</label>
           <label id="ranking" class="text-info"></label>
           <label>clasificacion</label>
@@ -65,7 +68,10 @@
           <label>Fecha</label>
           <label id="date" class="text-info"></label>
         </div>
-        
+        <div class="synopsis">
+          <h6 class="text-center text-info">sinopsis</h6>
+          <p id="synopsis"></p>
+        </div>
         
         </div>
        
@@ -76,14 +82,15 @@
         -->
     </div>
     </template>
+    <div class="principal">
     <div class="list" id="listAnime">
-  
-        
+      
+    </div>
   
 
 </div>
 </div>  
-<img src="img/button-scroll.png" id="scroll">
+<img src="img/scroll.png" id="scroll">
 <div class="footer">
     <footer class="" >Creado por facundo loto.</footer>
 </div>
