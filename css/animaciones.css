@@ -1,0 +1,29 @@
+#scroll{
+    height:40px;
+    width: 40px;
+    position: fixed;
+    bottom:2.2em;
+    right:0;
+    animation-name:slideDown;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    display: none;
+    }
+
+    @-webkit-keyframes slideDown {
+        0%{
+        -webkit-transform: translateY(-50%);
+        opacity:1;
+        
+        }
+        50%{
+        -webkit-transform: translateY(10%);
+        opacity:.5;
+        }
+        100%{
+        -webkit-transform: translateY(-50%);
+        opacity:1;
+        }
+        
+        
+        }
