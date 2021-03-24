@@ -1,59 +1,42 @@
 @media only screen and (min-device-width : 319px) and (max-device-width : 479px) {
-.navDesktop{display:none;}
-
     .home{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); /*sirve para que se adapte las columnas al responsive //ver grid css*/
-    grid-auto-rows:auto;/*sirve para que se adapte las columnas al responsive //ver grid css*/
-    grid-column-gap:6em;
-    text-transform: capitalize;
-    max-width:100vw;
-    }
+      
+        grid-row-gap:6em;
+      
+        max-width:80vw;
+        }
+        
+        .cardTemplate{
+        min-height:520px;
+        max-width:100%;
+        }
+        .cardTemplate h5{
+        font-size:1em;
+        height:2.5em;
+        position: relative;
+        top:.5em;
     
-    .cardTemplate{
-    margin: 0 auto;
-    box-shadow: 10px 10px 5px 0px rgba(73, 73, 73, 0.521);
-    max-width:80vw;
-    max-height:65%;
-    animation-name: opacity;
-    animation-duration:1s;
-    background-color: #214151;
-    }
-    .cardTemplate h5{
-    font-size:1em;
-    overflow: hidden;
-    height:2.5em;
-    position: relative;
-    top:.5em;
-    color: rgb(224, 223, 223);
-    }
+        }
+    
+    
+        .informacion label{
+        margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
+        display:block;
+        width:100%;
+        }
+        .informacion label{
+        text-transform: capitalize;
+        font-weight:500;
+        margin-bottom:.5em;
+        }
+        
 
-
-    .informacion{
-    margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
-    display: flex;
-    text-align:center;
-    justify-content:left;
-    align-content: center;
-    flex-direction: column;
-    width:100%;
-    color: rgb(224, 223, 223);
-    }
-    .informacion label{
-    text-transform: capitalize;
-    font-weight:500;
-    margin-top:.2em;
-   
-    }
-    
-   .informacion a{margin-top:1em;}
-    
-    #img{
-    width:100%;
-    height:35%;
-    }
-    
+        
+        #img{
+        width:100%;
+        height:300px !important;
+        }
+  
 }
 
 
@@ -68,58 +51,47 @@
 
 
 @media only screen and (min-device-width :318px){
-.navDesktop{display:none;}
 .home{
-    /*margin: 0 auto;*/
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); /*sirve para que se adapte las columnas al responsive //ver grid css*/
-    grid-auto-rows:auto;/*sirve para que se adapte las columnas al responsive //ver grid css*/
-    grid-column-gap:6em;
-    text-transform: capitalize;
-    max-width:100vw;
-    max-height:100vh;
-    }
 
-    .cardTemplate{
-    margin: 0 auto;
-    box-shadow: 10px 10px 5px 0px rgba(73, 73, 73, 0.521);
-    max-width:80vw;
-    max-height:65%;
-    animation-name: opacity;
-    animation-duration:1s;
-    background-color: #214151;
-    }
-    .cardTemplate h5{
-    font-size:1em;
-    overflow: hidden;
-    height:2.5em;
-    position: relative;
-    top:.5em;
-    color: rgb(224, 223, 223);
-    }
+grid-row-gap:6em;
+
+max-width:80vw;
+}
+
+.cardTemplate{
+min-height:520px;
+max-width:100%;
+}
+.cardTemplate h5{
+font-size:1em;
+height:2.5em;
+position: relative;
+top:.5em;
+
+}
 
 
-    .informacion{
-    margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
-    display: flex;
-    text-align:center;
-    justify-content:left;
-    align-content: center;
-    flex-direction: column;
-    width:100%;
-    color: rgb(224, 223, 223);
-    }
-    .informacion label{
-    text-transform: capitalize;
-    font-weight:500;
-    margin-top:.2em;
-   
-    }
+.informacion{
+margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
+display:inline;
+width:100%;
+}
+.informacion label{
+text-transform: capitalize;
+font-weight:500;
+margin-bottom:.5em;
+}
+
+
+
+#img{
+width:100%;
+height:300px !important;
+        }
+  
+}
+
+
     
-   .informacion a{margin-top:1em;}
+  
     
-    #img{
-    width:100%;
-    height:35%;
-    }
-    }
