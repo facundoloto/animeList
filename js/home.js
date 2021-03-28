@@ -2,10 +2,10 @@ let anime=document.getElementById("home")
 
 /*es lo mismo que search*/
 async function peticionHome(container,idTemplate,idTitle,idImg,idRanking,idCalificacion,idDate,url){//top
-    let peticionHome=await fetch( `https://api.jikan.moe/v3/top/anime`)
+    let peticionHome=await fetch( `https://api.jikan.moe/v3/top/anime/1/bypopularity`)
     let resultadoHome=await peticionHome.json()
     console.log(resultadoHome)
-    for(let i=0;i<30;i++){
+    for(let i=0;i<50;i++){
     console.log(resultadoHome.top[`${i}`].title)
     let fragment = document.createDocumentFragment();
     const template=document.getElementById(idTemplate) //guardamos el temaplate en una variable
@@ -26,5 +26,7 @@ async function peticionHome(container,idTemplate,idTitle,idImg,idRanking,idCalif
     container.appendChild(fragment)
     }
   }
+
+
 
 peticionHome(anime,"template","title","img","ranking","calificacion","date","urlLink")

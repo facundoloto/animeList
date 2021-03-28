@@ -1,42 +1,51 @@
 @media only screen and (min-device-width : 319px) and (max-device-width : 479px) {
-    .home{
-      
-        grid-row-gap:6em;
-      
-        max-width:80vw;
-        }
-        
-        .cardTemplate{
-        min-height:520px;
-        max-width:100%;
-        }
-        .cardTemplate h5{
-        font-size:1em;
-        height:2.5em;
-        position: relative;
-        top:.5em;
-    
-        }
-    
-    
-        .informacion label{
-        margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
-        display:block;
-        width:100%;
-        }
-        .informacion label{
-        text-transform: capitalize;
-        font-weight:500;
-        margin-bottom:.5em;
-        }
-        
+.info{
+margin-top:20vh;
+}
+.home h1{
+margin-bottom:-1em;
+}
+.home{
+margin-top:20vh;
+grid-row-gap:6em;
+max-width:80vw;
+}
 
-        
-        #img{
-        width:100%;
-        height:300px !important;
-        }
-  
+.cardTemplate{
+min-height:520px;
+max-width:100%;
+}
+.cardTemplate h5{
+font-size:1em;
+height:2.5em;
+position: relative;
+top:.5em;
+
+}
+
+
+.informacion label{
+margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
+display:block;
+width:100%;
+}
+.informacion label{
+text-transform: capitalize;
+font-weight:500;
+margin-bottom:.5em;
+}
+
+
+
+#img{
+width:100%;
+height:300px !important;
+}
+footer{
+margin-top:10em;
+position: absolute;
+position:0;
+}
 }
 
 
@@ -87,11 +96,10 @@ margin-bottom:.5em;
 #img{
 width:100%;
 height:300px !important;
-        }
-  
+}
+
 }
 
 
-    
-  
-    
+
+
