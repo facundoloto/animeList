@@ -62,4 +62,18 @@
     width:100%;
     height:35%;
     }
+
+    .menu{width:100vw !important;}
+
+    .loader img{ /*icono de carga*/
+        margin-top:50px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width:30px;
+        height:30px;
+       
+        }
     

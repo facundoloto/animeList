@@ -4,6 +4,8 @@ let animeInput=document.getElementById("searchAnime")
 let animeButton=document.getElementById("botonBuscar")
 let anime=document.getElementById("home")
 let titulo=document.getElementById("titulo")
+let loader=document.getElementById('load')
+loader.style.display="none" 
 //let flecha=document.getElementById("scroll")
 function remove(container){ //en container pasamos como parametro lo que vamos a borrar dentro de el
   while (container.firstChild) { //si hay un hijo pasa al ciclo y elimana a todos hasta que el primero hijo de falso(ya no tenga ningun nodo hijo)
@@ -15,9 +17,10 @@ async function buscar(query,container,titulo,idTemplate,idTitle,idImg,idRanking,
     let bandera=false
     let buscador=query.replace(/\b\w/g, l => l.toUpperCase()) //convierta la primer letra en mayusculas de cada palabra,esto sirve la funcion que filtra la palabras clave ya que empiezan con la primer letra en mayusculas
     if(query===""){
-      alert("vacio")
+      swal("campo vacio")
       }
       else{
+        loader.style.display="flex"
         let peticion=await fetch( `https://api.jikan.moe/v3/search/anime?q=/${query}`)
         let resultado=await peticion.json()
         console.log(resultado.results)
@@ -44,12 +47,14 @@ async function buscar(query,container,titulo,idTemplate,idTitle,idImg,idRanking,
               newTemplate.getElementById(idDate).textContent=fechaInicio.getFullYear()+" / "+fechaFinal.getFullYear()
               //newTemplate.getElementById(idSinopsis).textContent=`${resultado.results[`${i}`].synopsis}`
              /* newTemplate.getElementById('sinopsis').textContent=`${resultado.results[`${i}`].synopsis}` */
+             loader.style.display="none"
               fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
               container.appendChild(fragment)
             }
       }
       if(bandera==false){ //si no se encuentra resultado de lo que buscamos al no activarse la bandera sigue en falso por la tanto muestra el siguente mensaje
         swal("no se encontro resultado")
+        loader.style.display="none"
         }
         else{
         bandera=false//si se encuentra resultado la bandera pasa a ser true y hay que volverla a ponerla en false para que valide si se encuentra resultado en las siguientes busquedas
