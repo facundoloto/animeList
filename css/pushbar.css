@@ -1,0 +1,39 @@
+.push{ /*barra de menu*/
+    z-index:9999;
+    }
+    .push ul{
+    margin-top:10em;
+    
+    }
+    .push ul li h4{
+    
+      margin-left:.5em;
+      }
+    .push ul li{
+    margin-top:2em;
+    
+    }
+    .push ul li{
+      margin-top:1em;
+      margin-left:-.5em;
+      }
+    .close{
+    position:absolute;
+    top:4em;
+    right:10px;
+    }
+    .filter{ /*sticky(posision estatica en determinada posicion) del menu de filtros*/
+        position:sticky;
+        top:4.7em;
+        
+        background-color: #334149;
+        }
+        .filter button {
+        border:solid .5px white;
+        border-radius:10%;
+        }
+        .filter button img{
+        width:35px;
+        height:35px;
+        
+        }

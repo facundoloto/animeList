@@ -1,5 +1,5 @@
 @media only screen and (min-device-width : 319px) and (max-device-width : 479px) {
-    .Search,.Generos{
+    .Search{
     margin-top:10vh;
     width:100vw;
     
@@ -12,6 +12,45 @@
    .Search button{
     margin-left:.5em;
    }
+   .header ul{
+z-index:9999;
+   }
+   .filter{
+    /*sticky(posision estatica en determinada posicion) del menu de filtros*/
+        position:sticky;
+        top:3.5em;
+        z-index:1000;
+        
+        }
+        .filter button {
+        border:solid .5px rgb(68, 68, 68);
+        border-radius:10%;
+
+        }
+   .push{ /*barra de menu*/
+    z-index:9999;
+    }
+    .push ul{
+        z-index:9999;
+    margin-top:2em;
+    margin-left:-2em;
+    list-style:none;
+    }
+    .push ul li h4{
+    
+     
+      }
+    .push ul li{
+    margin-top:.5em;
+    
+    }
+
+    .close{
+    position:absolute;
+    top:1.3em;
+    right:10px;
+    }
+    
     .home h1{
     margin-bottom:-1em;
     }
@@ -52,9 +91,16 @@
     height:300px !important;
     }
 .container nav{
-position: absolute;
-bottom:10vh;
-
+margin:0 auto;
+margin-top:2em;
+margin-bottom:2em;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+footer{
+position:relative;
+top:1em;
 }
     }
     
