@@ -2,7 +2,7 @@ let anime=document.getElementById("home")
 
 /*es lo mismo que search*/
 async function peticionHome(container,idTemplate,idTitle,idImg,idRanking,idCalificacion,idDate,url){//top
-    let peticionHome=await fetch( `https://api.jikan.moe/v3/top/anime/1/bypopularity`)
+    let peticionHome=await fetch(`https://api.jikan.moe/v3/top/anime/1/favorite`)
     let resultadoHome=await peticionHome.json()
     console.log(resultadoHome)
     for(let i=0;i<50;i++){
