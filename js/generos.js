@@ -35,7 +35,7 @@ loader.style.display="flex"
 paginacion.style.display="none"//oculta la nav de paginas 
 pie.style.display="none" //oculta el footer 
 pagina.textContent=page//este valo cambiara de pagina y traera otro json
-let peticionGeneros=await fetch( `https://api.jikan.moe/v3/search/anime?q=&page=${page}&genre=${genero}=$order_by=ascending`)
+let peticionGeneros=await fetch(`https://api.jikan.moe/v3/genre/anime/${genero}/${page}/favorite`)
 let resultadoGeneros=await peticionGeneros.json()
 console.log(resultadoGeneros)
 for(let i=0;i<25;i++){
