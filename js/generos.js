@@ -35,25 +35,22 @@ loader.style.display="flex"
 paginacion.style.display="none"//oculta la nav de paginas 
 pie.style.display="none" //oculta el footer 
 pagina.textContent=page//este valo cambiara de pagina y traera otro json
-let peticionGeneros=await fetch(`https://api.jikan.moe/v3/genre/anime/${genero}/${page}/favorite`)
+let peticionGeneros=await fetch(`https://api.jikan.moe/v3/genre/anime/${genero}/${page}`)
 let resultadoGeneros=await peticionGeneros.json()
 console.log(resultadoGeneros)
 for(let i=0;i<25;i++){
 let fragment = document.createDocumentFragment();
 const template=document.getElementById("template") //guardamos el temaplate en una variable
 const newTemplate=template.content.cloneNode(true) //clonamos el template
-newTemplate.getElementById("urlLink").href=resultadoGeneros.results[`${i}`].url
-newTemplate.getElementById("title").textContent=`${resultadoGeneros.results[`${i}`].title}`
-newTemplate.getElementById("img").src=`${resultadoGeneros.results[`${i}`].image_url}`
-newTemplate.getElementById("ranking").textContent=`${resultadoGeneros.results[`${i}`].score}`
-newTemplate.getElementById("calificacion").textContent=`${resultadoGeneros.results[`${i}`].rated}`
-let inicio=resultadoGeneros.results[`${i}`].start_date
-let final=resultadoGeneros.results[`${i}`].end_date
-let fechaInicio = new Date(Date.parse(inicio));
-let fechaFinal = new Date(Date.parse(final));
-newTemplate.getElementById("date").textContent=fechaInicio.getFullYear()+" / "+fechaFinal.getFullYear()
+newTemplate.getElementById("urlLink").href=resultadoGeneros.anime[`${i}`].url
+newTemplate.getElementById("title").textContent=`${resultadoGeneros.anime[`${i}`].title}`
+newTemplate.getElementById("img").src=`${resultadoGeneros.anime[`${i}`].image_url}`
+newTemplate.getElementById("ranking").textContent=`${resultadoGeneros.anime[`${i}`].score}`
+newTemplate.getElementById("calificacion").textContent=`${resultadoGeneros.anime[`${i}`].type}`
+let inicio=resultadoGeneros.anime[`${i}`].airing_start
 
-console.log(resultadoGeneros.results[`${i}`].url)
+let fechaInicio = new Date(Date.parse(inicio));
+newTemplate.getElementById("date").textContent=fechaInicio.getFullYear()
 document.getElementById("titulo").textContent=geners
 fragment.appendChild(newTemplate) //fragment guarda todos los elementos para cuando queramos usarlos lo podamos mostrar en el dom cuando queramos
 anime.appendChild(fragment)
