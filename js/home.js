@@ -1,5 +1,5 @@
 let anime=document.getElementById("home")
-
+//esto en teoria estaba planeado para que sea una funcion reciclable
 /*es lo mismo que search*/
 async function peticionHome(container,idTemplate,idTitle,idImg,idRanking,idCalificacion,idDate,url){//top
     let peticionHome=await fetch(`https://api.jikan.moe/v3/top/anime/1/favorite`)
