@@ -18,8 +18,6 @@
     height:70%;
     animation-name: opacity;
     animation-duration:1s;
-    /*background-color: #214151 ;*/
-   
     border-radius:5px;
     }
     .cardTemplate h5{
@@ -41,13 +39,14 @@
     
     }
     .informacion{
-    margin:0 auto; /*este codigo ayuda a alinear al centro del layout un div*/
-    display: flex;
-    text-align:center;
-    justify-content:left;
-    align-content: center;
-    flex-direction: column;
+        margin:0 auto; 
+        display: flex;
+        text-align:center;
+        justify-content:left;
+        align-content: center;
+        flex-direction: row;
     width:100%;
+    height: 100% !important;
     color: rgb(224, 223, 223);
     }
     .informacion label{
